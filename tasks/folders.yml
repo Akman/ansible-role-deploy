@@ -1,0 +1,13 @@
+---
+# tasks/folders.yml
+
+- name: Deploy | Ensure all folders are exist
+  file:
+    state: directory
+    path: "{{ item.path }}"
+    mode: "{{ item.mode }}"
+    owner: "{{ item.owner }}"
+    group: "{{ item.group }}"
+  with_items:
+    - { mode: "750", path: "{{ deploy_www_root }}", group: "{{ deploy_www_owner_group }}", owner: "{{ deploy_www_owner_user }}" }
+    - { mode: "700", path: "{{ deploy_tmp_root }}", group: "{{ deploy_www_owner_user }}", owner: "{{ deploy_www_owner_user }}" }

@@ -1,0 +1,8 @@
+---
+# tasks/symlinks.yml
+
+- name: Deploy | Ensure symlink to current release folder presents
+  file:
+    state: link
+    path: "{{ deploy_www_root }}/{{ deploy_current }}"
+    src: "{{ deploy_www_root }}/public"

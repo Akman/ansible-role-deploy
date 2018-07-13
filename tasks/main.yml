@@ -1,0 +1,7 @@
+---
+# tasks/main.yml
+
+- import_tasks: setup.yml
+- import_tasks: folders.yml
+- import_tasks: permissions.yml
+- import_tasks: symlinks.yml

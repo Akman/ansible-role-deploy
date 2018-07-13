@@ -1,0 +1,12 @@
+---
+# tasks/permissions.yml
+
+- name: Deploy | Build command list to setup release folder owner and group
+  set_fact:
+    symfony_permissions_cmd: >
+      chown -Rf {{ deploy_www_owner_user }}:{{ deploy_www_owner_group }} {{ deploy_www_root }};
+      chown -Rf {{ deploy_www_owner_user }}:{{ deploy_www_owner_user }} {{ deploy_tmp_root }};
+
+- name: Deploy | Ensure release folder have valid owner and group
+  shell: "{{ symfony_permissions_cmd | regex_replace(';\\s+chown ', ';chown ') | trim }}"
+  changed_when: false
