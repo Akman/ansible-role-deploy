@@ -18,9 +18,9 @@ Available variables are listed below, along with default values (see `defaults/m
 
     Application temp directory
 
-    # deploy_current: "current"
+    # deploy_doc_root: "/var/www/domain.com/current"
 
-    Symbolic link name to current release directory created in `deploy_www_root` directory
+    Symbolic link name to current release directory
 
 ## Dependencies
 
@@ -34,7 +34,7 @@ Available variables are listed below, along with default values (see `defaults/m
 
     deploy_www_root: "/var/www/domain.com"
     deploy_tmp_root: "/var/tmp/domain.com"
-    deploy_current: "current"
+    deploy_doc_root: "/var/www/domain.com/current"
 
 ## License
 

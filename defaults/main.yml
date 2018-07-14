@@ -3,5 +3,4 @@
 
 deploy_www_root: /var/www/domain.com
 deploy_tmp_root: /var/tmp/domain.com
-
-deploy_current: current
+deploy_doc_root: /var/www/domain.com/current

@@ -4,5 +4,5 @@
 - name: Deploy | Ensure symlink to current release folder presents
   file:
     state: link
-    path: "{{ deploy_www_root }}/{{ deploy_current }}"
+    path: "{{ deploy_doc_root }}"
     src: "{{ deploy_www_root }}/public"
