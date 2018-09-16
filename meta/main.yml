@@ -4,7 +4,7 @@
 dependencies: []
 
 galaxy_info:
-  role_name: deploy
+  role_name: symfony_deploy
   author: Akman
   description: Deploy Application on Linux
   license: "license (MIT)"
