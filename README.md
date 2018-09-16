@@ -1,4 +1,4 @@
-# Ansible Role: deploy
+# Ansible Role: symfony_deploy
 
 Deploy Web Application on Linux
 
@@ -28,7 +28,7 @@ Available variables are listed below, along with default values (see `defaults/m
 
     - hosts: all
       roles:
-        - Akman.deploy
+        - Akman.symfony_deploy
 
 *Inside vars/main.yml*:
 
